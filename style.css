@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #333c58;
+  --secondary-color: #f6f7f0;
+  --text-color: #333c58;
+}
+html {
+  font-size: 10px;
+}
+body {
+  font-family: Lora, sans;
+  background-color: black;
+  color: #333c58;
+}
+
+/* common styles */
+img {
+  width: 200px;
+}
+a {
+  text-decoration: none;
+  color: #333c58;
+}
+
+/* layouts */
+.container {
+  max-width: 1000px;
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  background: #f6f7f0;
+}
+
+hr {
+  grid-column: 1/-1;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-top: 2px solid rgba(128, 128, 128, 0.229);
+}
+.profile {
+  background-color: var(--primary-color);
+  grid-column: 1 / -1;
+  margin-bottom: 2rem;
+  padding: 2rem;
+}
+
+/* profile */
+.profile_container {
+  padding: 3rem;
+  display: flex;
+  gap: 5rem;
+}
+.profile_profileImg {
+  max-width: 250px;
+}
+.profile_name_Position {
+  color: var(--secondary-color);
+  font-weight: 200;
+  font-size: clamp(2rem, 8vw, 3rem);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: -0.8rem;
+  padding-top: 1rem;
+}
+.profile_name_FullName {
+  font-family: Lora, sans;
+  color: var(--secondary-color);
+  font-weight: 450;
+  font-size: clamp(2rem, 8vw, 5rem);
+  text-transform: uppercase;
+  display: block;
+}
+
+/* information */
+.information {
+  padding: 2rem;
+  display: flex;
+  gap: 30px;
+}
+.information_container {
+  width: 45%;
+  box-sizing: border-box;
+  padding: 10px;
+  z-index: 999;
+}
+
+.infoHeader {
+  font-family: Montserrat Classic, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+.infoSubHeader {
+  font-size: 17px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.infoHeaderDescription {
+  font-size: 16px;
+  font-weight: 600;
+}
+.infoContent {
+  font-size: 16px;
+  text-align: justify;
+}
+.infoContent a {
+  margin: 0;
+  padding: 0;
+}
+.infoContent ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+/* Media Queries */
+
+@media (min-width: 375px) and (max-width: 912px) {
+  .container {
+    margin: 0;
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 7rem;
+  }
+}
+@media only screen and (max-width: 912px) {
+  hr {
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 912px) {
+  .profile_container {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 912px) {
+  body,
+  .container {
+    min-width: 320px;
+    max-width: 912px;
+    width: 100%;
+  }
+  .profile_container {
+    align-items: center;
+  }
+  .profile_name_Position,
+  .profile_name_FullName {
+    text-align: center;
+  }
+  .information {
+    display: block;
+  }
+  .information_container {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    z-index: 999;
+  }
+  .infoContent a {
+    display: flex;
+  }
+}
+@media (width: 912px) {
+  .infoHeader {
+    font-weight: 700;
+    font-size: 22px;
+  }
+  .infoSubHeader {
+    font-size: 21px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .infoHeaderDescription {
+    font-size: 21px;
+    font-weight: 600;
+  }
+  .infoContent {
+    font-size: 19px;
+  }
+}
